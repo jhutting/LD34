@@ -7,11 +7,11 @@ The game was built from scratch in about 16 hours during the weekend of 12-14th 
 
 ## Downloads
 Refrigerator Wars can be downloaded from:
-    * [Github](https://github.com/jhutting/LD34) (source)
-    * [Release page](http://littlebluefrog.nl/LD/LD34-Refrigerator_wars-1.0.jar) (jar file for Linux/OS X/Windows - requires Java installed)
-    * [Ludum Dare entry](http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=34105) (contains the above links and some screenshots)
+   * [Github](https://github.com/jhutting/LD34) (source)
+   * [Release page](http://littlebluefrog.nl/LD/LD34-Refrigerator_wars-1.0.jar) (jar file for Linux/OS X/Windows - requires Java installed)
+   * [Ludum Dare entry](http://ludumdare.com/compo/ludum-dare-34/?action=preview&uid=34105) (contains the above links and some screenshots)
 The game can also be played online at
-    * [Home page](http://littlebluefrog.nl/LD/LD34/)
+   * [Home page](http://littlebluefrog.nl/LD/LD34/)
 
 ## Controls
 The left and right arrow on the keyboard will select the command shown left or right.
