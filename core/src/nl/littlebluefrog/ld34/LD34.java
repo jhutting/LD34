@@ -123,7 +123,7 @@ public class LD34 extends ApplicationAdapter {
         mStage.addActor(buttonRight);
         mStage.addActor(mGameOver);
 
-        mInputHandler = new InputHandler(mGamelogic);
+        mInputHandler = new InputHandler(mGamelogic, mStage);
         mStage.act();
 	}
 

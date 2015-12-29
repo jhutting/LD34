@@ -19,6 +19,7 @@ import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Touchable;
 import nl.littlebluefrog.ld34.logic.ButtonType;
 import nl.littlebluefrog.ld34.logic.Direction;
 
@@ -47,6 +48,10 @@ public class Button extends Actor {
         mOkImage = new Texture(Gdx.files.internal("gfx/ok_button.png"));
         mEscapeImage = new Texture(Gdx.files.internal("gfx/escape_button.png"));
         mAtkImage = new Texture(Gdx.files.internal("gfx/atk_button.png"));
+
+        setTouchable(Touchable.enabled);
+        setWidth(mDiceImage.getWidth());
+        setHeight(mDiceImage.getHeight());
     }
 
     public void setType(ButtonType type) {

@@ -18,15 +18,20 @@ package nl.littlebluefrog.ld34.logic;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.badlogic.gdx.scenes.scene2d.Stage;
 
 /**
  * @author Johan Hutting
  */
 public class InputHandler implements InputProcessor {
     private GameLogicController mGamelogic;
+    private Stage mStage;
 
-    public InputHandler(GameLogicController gameLogicController) {
+    public InputHandler(GameLogicController gameLogicController, Stage stage) {
         mGamelogic = gameLogicController;
+        mStage = stage;
         Gdx.input.setInputProcessor(this);
     }
 
@@ -61,6 +66,17 @@ public class InputHandler implements InputProcessor {
 
     @Override
     public boolean touchUp(int screenX, int screenY, int pointer, int button) {
+        Vector2 location = mStage.screenToStageCoordinates(new Vector2(screenX, screenY));
+        Actor touched = mStage.hit(location.x, location.y, false);
+        if (touched == mGamelogic.getLeftButton()) {
+            mGamelogic.button1Pressed();
+            return true;
+        }
+
+        if (touched == mGamelogic.getRightButton()) {
+            mGamelogic.button2Pressed();
+            return true;
+        }
         return false;
     }
 
